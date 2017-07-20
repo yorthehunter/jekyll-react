@@ -9,7 +9,7 @@ github_username: stitchfix
 # Build settings
 destination: public
 source: src
-baseurl: jekyll-react
+baseurl: /jekyll-react
 
 markdown: kramdown
 exclude: ['Gemfile', 'Gemfile.lock','node_modules']
