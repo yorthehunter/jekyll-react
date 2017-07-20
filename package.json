@@ -4,7 +4,8 @@
   "description": "A Jekyll static site boilerplate for rapidly prototyping using React + Weave",
   "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages-deploy"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
     "url": "https://github.com/yorthehunter/jekyll-react/issues"
   },
   "homepage": "https://github.com/yorthehunter/jekyll-react#readme",
+  "gh-pages-deploy": {
+    "staticpath": "public"
+  },
   "dependencies": {
     "@stitch-fix/weave": "0.3.3"
   },
@@ -36,6 +40,7 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "gh-pages-deploy": "^0.4.2",
     "node-sass": "^4.5.3",
     "react": "^15.6.1",
     "react-addons-update": "^15.6.0",
