@@ -1,4 +1,5 @@
-import '../node_modules/@stitch-fix/weave/scss/weave.scss'
+import '@stitch-fix/weave/scss/weave.scss'
+// import '../node_modules/@stitch-fix/weave/scss/weave.scss'
 
 console.log("Hello, world!")
 
