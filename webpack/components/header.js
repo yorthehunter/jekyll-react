@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {render} from 'react-dom';
 
-class Hello extends Component {
+class Header extends Component {
   render() {
     return (
-      <div>Hey, y’all!!!</div>
+      <header>Header</header>
     )
   }
 }
-export default Hello;
+export default Header;
