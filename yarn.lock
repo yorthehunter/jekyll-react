@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@stitch-fix/weave@0.3.3":
-  version "0.3.3"
-  resolved "https://registry.yarnpkg.com/@stitch-fix/weave/-/weave-0.3.3.tgz#bf4b7fc864d3006d0c16a35ff7af2ffb3450e5e4"
+"@stitch-fix/weave@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@stitch-fix/weave/-/weave-0.5.0.tgz#86b0f0eba4a0fd9fac5b913b23afeb0ba88cd60f"
 
 abbrev@1:
   version "1.1.0"
