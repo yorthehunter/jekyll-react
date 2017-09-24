@@ -10,14 +10,19 @@ import Footer from './components/footer';
 import WeaveButton from './components/weaveButton';
 import WeaveTooltip from './components/weaveTooltip';
 import WeaveBadge from './components/weaveBadge';
+import WeaveHasPopover from './components/weaveHasPopover';
+import WeavePopover from './components/weavePopover';
 import Hello from './components/hello';
 
 class App extends React.Component {
   render () {
-    return <div>
+    return <div className="weave-container">
       <Header />
       <Nav />
       <div>
+
+        <WeavePopover popoverVisible={true}>Hello</WeavePopover>
+
         <WeaveBadge content="!">Hello</WeaveBadge>
 
         <WeaveButton>Button</WeaveButton>
@@ -33,6 +38,11 @@ class App extends React.Component {
         <WeaveButton size="sm" type="flat">Button</WeaveButton>
         <WeaveButton size="md" type="flat">Button</WeaveButton>
         <WeaveButton size="lg" type="flat">Button</WeaveButton>
+
+        <WeaveHasPopover>
+          Click Here!
+          <WeavePopover>Hello</WeavePopover>
+        </WeaveHasPopover>
 
         <p className="weave-p">
           <WeaveTooltip placement="below" content="Hello friends!" indicator={true}>Tooltip Below!</WeaveTooltip>

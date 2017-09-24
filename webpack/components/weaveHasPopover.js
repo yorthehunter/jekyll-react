@@ -1,4 +1,5 @@
 import React from 'react';
+import WeavePopover from './weavePopover';
 import Tag from './tag';
 
 class WeaveHasPopover extends React.Component {
@@ -6,21 +7,41 @@ class WeaveHasPopover extends React.Component {
     this.setState({popoverVisible: false});
   }
 
-  const defaultTag = 'span'
+  render () {
+    const defaultTag = 'span'
+
+    return (
+      <Tag className={"weave-opens-popover weave-has-popover" + (this.props.indicator ? " weave-has-popover-indication" : "")}
+           tag={this.props.tag ? this.props.tag : defaultTag}
+           isVisible={this.state.popoverVisible}
+           onClick={this.toggleVisibility}>
+          {
+            React.Children.map(this.props.children, child => {
+              if (child.type === WeavePopover)
+                return React.cloneElement(child, {
+                  popoverVisible: this.state.popoverVisible
+                })
+              else
+                return child
+            })
+          }
+      </Tag>
+    )
+  }
+
+  placement = (placement) => {
+    if (placement == 'left' || 'pull-left') {
+      return "weave-popover--pull-left"
+    } else if (placement == 'right' || 'pull-right') {
+      return "weave-popover--pull-right"
+    } else {
+      return "weave-popover--centered"
+    }
+  }
 
   toggleVisibility = () => {
     this.setState({popoverVisible: !this.state.popoverVisible})
-  }
-
-  render () {
-    return (
-      <Tag className={"weave-opens-popover" + (props.indicator ? " weave-has-popover-indication" : "")}
-           tag={props.tag ? props.tag : defaultTag}
-           isVisible={this.state.popoverVisible}
-           onClick={this.toggleVisibility}>
-        {props.children}
-      </Tag>
-    )
+    console.log(this.state.popoverVisible)
   }
 }
 
