@@ -9963,6 +9963,15 @@ var App = function (_React$Component) {
           'div',
           { className: 'u-stack--xl' },
           _react2.default.createElement(
+            _weave_badge2.default,
+            null,
+            'Hello'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'u-stack--xl' },
+          _react2.default.createElement(
             _weave_button2.default,
             null,
             'Button'
@@ -22996,14 +23005,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var WeaveBadge = function WeaveBadge(props) {
   var defaultTag = 'span';
 
-  return _react2.default.createElement(
-    _tag2.default,
-    { className: "weave-has-badge",
-      'data-badge': props.content ? props.content : 'none',
-      tag: props.tag ? props.tag : defaultTag },
-    props.children
-  );
+  if (props.content) {
+    return _react2.default.createElement(
+      _tag2.default,
+      { className: "weave-has-badge",
+        'data-badge': props.content,
+        tag: props.tag ? props.tag : defaultTag },
+      props.children
+    );
+  } else {
+    return _react2.default.createElement(
+      _tag2.default,
+      { className: "weave-has-badge",
+        tag: props.tag ? props.tag : defaultTag },
+      props.children
+    );
+  }
 };
+
 exports.default = WeaveBadge;
 
 /***/ }),

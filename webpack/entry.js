@@ -27,6 +27,9 @@ class App extends React.Component {
       <div className="u-stack--xl">
         <WeaveBadge content="!">Hello</WeaveBadge>
       </div>
+      <div className="u-stack--xl">
+        <WeaveBadge>Hello</WeaveBadge>
+      </div>
 
       <div className="u-stack--xl">
         <WeaveButton>Button</WeaveButton>
