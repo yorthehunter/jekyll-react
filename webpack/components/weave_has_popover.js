@@ -1,5 +1,5 @@
 import React from 'react';
-import WeavePopover from './weavePopover';
+import WeavePopover from './weave_popover';
 import Tag from './tag';
 
 class WeaveHasPopover extends React.Component {
@@ -41,7 +41,6 @@ class WeaveHasPopover extends React.Component {
 
   toggleVisibility = () => {
     this.setState({popoverVisible: !this.state.popoverVisible})
-    console.log(this.state.popoverVisible)
   }
 }
 

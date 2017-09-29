@@ -667,6 +667,7 @@ dl,
 .weave-checkbox + .weave-form__label,
 .weave-radio + .weave-form__label,
 .weave-label--lg,
+.weave-ribbon--lg,
 .weave-table--basic {
   font-size: 0.875rem; }
 
@@ -676,6 +677,7 @@ dl,
 .weave-radio--sm + .weave-form__label,
 .weave-checkbox--sm + .weave-form__label,
 .weave-label--md,
+.weave-ribbon--md,
 .weave-tag,
 .weave-has-tooltip:after,
 .weave-tooltip {
@@ -684,13 +686,17 @@ dl,
 .type-xxs,
 .weave-has-badge:after,
 .weave-badge,
-.weave-label--sm {
+.weave-label--sm,
+.weave-ribbon--sm {
   font-size: 0.625rem; }
 
 .line-normal {
   line-height: 1; }
 
-.line-small {
+.line-small,
+.weave-ribbon--sm,
+.weave-ribbon--md,
+.weave-ribbon--lg {
   line-height: 1rem; }
 
 .line-normal--body,
@@ -1979,6 +1985,79 @@ dd {
     left: 107%;
     right: -8%; } }
 
+
+.weave-ribbon--upper-left:after,
+.weave-ribbon--upper-right:after,
+.weave-ribbon--lower-left:after,
+.weave-ribbon--lower-right:after {
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  clip-path: polygon(0% 100%, 100% 0, 100% 100%);
+  position: absolute; }
+
+
+.weave-ribbon {
+  background-color: #9575CD;
+  color: #FFFFFF;
+  display: inline-flex;
+  position: relative; }
+  
+  .weave-ribbon--sm {
+    padding: 0 0.25rem; }
+  
+  .weave-ribbon--md {
+    padding: 0.25rem 0.5rem; }
+  
+  .weave-ribbon--lg {
+    padding: 0.5rem 1rem; }
+  
+  .weave-ribbon--overlay {
+    position: absolute; }
+  
+  .weave-ribbon--upper-left {
+    border-top-left-radius: 2px;
+    left: -0.25rem;
+    top: -0.25rem; }
+    
+    .weave-ribbon--upper-left:after {
+      content: '';
+      left: 0;
+      bottom: -0.25rem;
+      transform: rotate(270deg); }
+  
+  .weave-ribbon--upper-right {
+    border-top-right-radius: 2px;
+    right: -0.25rem;
+    top: -0.25rem; }
+    
+    .weave-ribbon--upper-right:after {
+      content: '';
+      right: 0;
+      bottom: -0.25rem;
+      transform: rotate(180deg); }
+  
+  .weave-ribbon--lower-left {
+    border-bottom-left-radius: 2px;
+    left: -0.25rem;
+    bottom: -0.25rem; }
+    
+    .weave-ribbon--lower-left:after {
+      content: '';
+      left: 0;
+      top: -0.25rem; }
+  
+  .weave-ribbon--lower-right {
+    border-bottom-right-radius: 2px;
+    right: -0.25rem;
+    bottom: -0.25rem; }
+    
+    .weave-ribbon--lower-right:after {
+      content: '';
+      right: 0;
+      top: -0.25rem;
+      transform: rotate(90deg); }
+
 .weave-spinner {
   animation: weave-rotator 1.8s linear infinite; }
   .weave-spinner--lg {
@@ -2177,7 +2256,8 @@ a.weave-nav-link,
   box-shadow: 0 0 0 transparent;
   z-index: 0; }
 
-.weave-banner, .weave-button--cta, .weave-button--primary, .weave-button--secondary, .weave-card, .weave-dropdown-menu {
+.weave-banner, .weave-button--cta, .weave-button--primary, .weave-button--secondary, .weave-card, .weave-dropdown-menu,
+.weave-ribbon--overlay {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.16), 0 2px 10px rgba(0, 0, 0, 0.12);
   z-index: 100; }
 
